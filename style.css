@@ -1915,8 +1915,19 @@ button {
   }
 
   /* ---- Location Mobile ---- */
+  .location {
+    overflow-x: hidden;
+  }
+
   .location-card {
-    padding: 28px 24px;
+    padding: 24px 20px;
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+
+  .location-card__map iframe {
+    max-width: 100%;
   }
 
   .location-card__icon {
