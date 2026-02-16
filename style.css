@@ -1620,7 +1620,7 @@ button {
   .hero {
     min-height: 100vh;
     min-height: 100dvh;
-    padding: var(--header-height) 0 40px;
+    padding: var(--header-height) 0 60px;
   }
 
   .hero__bg-img {
@@ -1628,7 +1628,7 @@ button {
   }
 
   .hero__content {
-    padding: 0 8px;
+    padding: 20px 8px 0;
   }
 
   .hero__title {
