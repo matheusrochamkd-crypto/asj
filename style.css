@@ -368,7 +368,7 @@ button {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: var(--header-height);
+  padding: var(--header-height) 0 60px;
 }
 
 .hero__bg {
@@ -407,6 +407,7 @@ button {
   z-index: 2;
   text-align: center;
   max-width: 800px;
+  padding: 20px 0 0;
 }
 
 .hero__title {
@@ -1620,7 +1621,7 @@ button {
   .hero {
     min-height: 100vh;
     min-height: 100dvh;
-    padding: var(--header-height) 0 60px;
+    padding: var(--header-height) 0 40px;
   }
 
   .hero__bg-img {
@@ -1628,7 +1629,7 @@ button {
   }
 
   .hero__content {
-    padding: 20px 8px 0;
+    padding: 0 8px;
   }
 
   .hero__title {
