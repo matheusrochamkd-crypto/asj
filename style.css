@@ -1623,6 +1623,10 @@ button {
     padding: var(--header-height) 0 40px;
   }
 
+  .hero__bg-img {
+    object-position: 60% center;
+  }
+
   .hero__content {
     padding: 0 8px;
   }
@@ -1715,12 +1719,15 @@ button {
     gap: 12px;
     text-align: left;
     padding: 14px 20px;
+    overflow: visible;
   }
 
   .stat__number {
     font-size: 1.3rem;
     margin-bottom: 0;
-    min-width: 50px;
+    min-width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .stat__label {
@@ -1779,6 +1786,19 @@ button {
 
   .timeline-item {
     margin-bottom: 32px;
+  }
+
+  /* Force image above title for ALL timeline items on mobile */
+  .timeline-item .timeline-img {
+    order: 1;
+  }
+
+  .timeline-item .timeline-dot {
+    order: 2;
+  }
+
+  .timeline-item .timeline-card {
+    order: 3;
   }
 
   .timeline-dot {
@@ -1989,15 +2009,16 @@ button {
 
   /* ---- WhatsApp FAB Mobile ---- */
   .whatsapp-fab {
-    width: 56px;
-    height: 56px;
-    bottom: 16px;
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
     right: 16px;
+    z-index: 999;
   }
 
   .whatsapp-fab svg {
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
   }
 
   .whatsapp-fab__tooltip {
