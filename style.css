@@ -31,7 +31,7 @@
   --font-body: 'Inter', sans-serif;
 
   /* Spacing */
-  --section-padding: 100px 0;
+  --section-padding: 80px 0;
   --container-width: 1200px;
   --header-height: 80px;
 
@@ -1205,7 +1205,7 @@ button {
    FOOTER
    ======================================== */
 .footer {
-  padding: 64px 0 0;
+  padding: 48px 0 0;
   background: var(--bg-secondary);
   border-top: 1px solid rgba(156, 163, 175, 0.08);
 }
@@ -1213,8 +1213,8 @@ button {
 .footer__grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 48px;
-  padding-bottom: 48px;
+  gap: 36px;
+  padding-bottom: 36px;
 }
 
 .footer__logo-img {
@@ -1271,7 +1271,7 @@ button {
 
 .footer__bottom {
   border-top: 1px solid rgba(156, 163, 175, 0.08);
-  padding: 24px 0;
+  padding: 16px 0;
   text-align: center;
 }
 
