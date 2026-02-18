@@ -242,7 +242,8 @@ button {
   -webkit-backdrop-filter: none;
   border-bottom: 1px solid transparent;
   transition: all var(--transition-base);
-  height: var(--header-height);
+  min-height: var(--header-height);
+  padding: 10px 0;
 }
 
 .header--scrolled {
@@ -266,14 +267,15 @@ button {
 }
 
 .header__logo-img {
-  height: 150px;
-  width: auto;
+  width: 280px;
+  height: auto;
   object-fit: contain;
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 768px) {
   .header__logo-img {
+    width: auto;
     height: 160px;
   }
 }
@@ -1612,6 +1614,22 @@ button {
   :root {
     --section-padding: 64px 0;
     --header-height: 64px;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: var(--header-height);
+    padding: 10px 0;
+    background-color: rgba(18, 18, 20, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: all var(--transition-base);
+    border-bottom: 1px solid rgba(156, 163, 175, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
 
   /* ---- Mobile Nav ---- */
