@@ -695,6 +695,18 @@ button {
   transform: scale(1.03);
 }
 
+.about__mobile-logo {
+  display: none;
+  margin-bottom: 24px;
+}
+
+.about__mobile-logo img {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
+  display: block;
+}
+
 .about__text-block {
   margin-top: 28px;
   padding-top: 24px;
@@ -1700,8 +1712,12 @@ button {
   }
 
   .about__image-wrapper {
-    border: none;
     box-shadow: none;
+    display: none;
+  }
+
+  .about__mobile-logo {
+    display: block;
   }
 
   /* ---- Mobile Nav ---- */
