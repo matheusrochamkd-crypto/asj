@@ -1016,8 +1016,8 @@ button {
 .gallery__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: 700px;
+  gap: 30px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
@@ -1639,6 +1639,7 @@ button {
   .gallery__grid {
     grid-template-columns: 1fr;
     max-width: 100%;
+    padding: 0 20px;
   }
 
   .gallery__comparison {
@@ -2210,6 +2211,9 @@ button {
   }
 
   /* Increase Lighter Blue in Mobile Background */
+  body {
+    background-attachment: scroll;
+  }
 
 }
 
