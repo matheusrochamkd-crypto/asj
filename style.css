@@ -1015,10 +1015,11 @@ button {
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .gallery__item {
@@ -1059,15 +1060,17 @@ button {
 
 .gallery__label {
   position: absolute;
-  top: 12px;
-  left: 12px;
-  padding: 3px 10px;
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--silver);
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 50px;
+  top: 10px;
+  left: 10px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  z-index: 5;
 }
 
 .gallery__label--after {
