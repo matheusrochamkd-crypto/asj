@@ -1352,9 +1352,8 @@ button {
 }
 
 .footer__partner-logo {
-  height: 40px;
-  /* Decreased from 50px */
-  max-width: 140px;
+  height: 60px;
+  max-width: none;
   object-fit: contain;
   filter: none;
   opacity: 1;
@@ -1736,12 +1735,10 @@ button {
     justify-content: center;
   }
 
-  /* Header Logo Mobile - Slightly Larger and Adjusted */
+  /* Header Logo Mobile - Large and Aligned Left */
   .header__logo-img {
-    height: 72px;
-    /* Increased from 56px */
-    margin-left: -10px;
-    /* Slight adjustment if needed */
+    height: 90px;
+    margin-left: 0;
   }
 
   /* ---- Hero Mobile ---- */
