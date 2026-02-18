@@ -1352,8 +1352,9 @@ button {
 }
 
 .footer__partner-logo {
-  height: 60px;
-  width: auto;
+  height: 40px;
+  /* Decreased from 50px */
+  max-width: 140px;
   object-fit: contain;
   filter: none;
   opacity: 1;
@@ -1668,7 +1669,7 @@ button {
     left: 0;
     width: 100%;
     min-height: var(--header-height);
-    padding: 10px 0;
+    padding: 12px 0;
     background-color: rgba(18, 18, 20, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -1735,8 +1736,12 @@ button {
     justify-content: center;
   }
 
+  /* Header Logo Mobile - Slightly Larger and Adjusted */
   .header__logo-img {
-    height: 56px;
+    height: 72px;
+    /* Increased from 56px */
+    margin-left: -10px;
+    /* Slight adjustment if needed */
   }
 
   /* ---- Hero Mobile ---- */
@@ -2114,7 +2119,8 @@ button {
   }
 
   .footer__logo-img {
-    height: 48px;
+    height: 60px;
+    /* Increased slightly for brand visibility */
   }
 
   .footer__heading {
@@ -2189,6 +2195,12 @@ button {
   .reveal--right.revealed {
     opacity: 1;
     transform: translate(0, 0);
+  }
+
+  /* Increase Lighter Blue in Mobile Background */
+  body {
+    background: radial-gradient(circle at center top, #2b3952, #1a2233, #000000);
+    /* Lighter/Bluer top */
   }
 }
 
