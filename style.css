@@ -1098,6 +1098,8 @@ button {
   object-fit: cover;
   transition: transform 0.5s ease;
   cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
 
 .gallery__before:hover .gallery__img,
