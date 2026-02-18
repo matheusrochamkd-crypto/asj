@@ -5,10 +5,19 @@
 /* ---------- CSS Custom Properties ---------- */
 :root {
   /* Colors */
-  --bg-primary: #0a0a0a;
-  --bg-secondary: #121212;
-  --bg-card: #1a1a1a;
-  --bg-card-hover: #222222;
+  --bg-primary: #121212;
+  --bg-secondary: transparent;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  /* Glassmorphism */
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  /* Hover */
+  --border-card: rgba(255, 255, 255, 0.1);
+
+  /* New Radial Gradient */
+  --bg-gradient: radial-gradient(circle at center top, #1a202c, #0d1117, #000000);
+
+  /* Subtle Line Color */
+  --divider-color: rgba(255, 255, 255, 0.04);
 
   --accent-cyan: #00AEEF;
   --accent-blue: #0054A6;
@@ -68,14 +77,28 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-primary);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' opacity='0.03'%3E%3C!-- Pliers --%3E%3Cpath d='M40 30 L50 50 L45 55 L35 35 Z'/%3E%3Cpath d='M60 30 L50 50 L55 55 L65 35 Z'/%3E%3Ccircle cx='50' cy='50' r='4'/%3E%3Cpath d='M45 55 L40 75' stroke-linecap='round'/%3E%3Cpath d='M55 55 L60 75' stroke-linecap='round'/%3E%3C!-- Scissors --%3E%3Cpath d='M140 120 L160 140' stroke-linecap='round'/%3E%3Cpath d='M160 120 L140 140' stroke-linecap='round'/%3E%3Ccircle cx='137' cy='145' r='6'/%3E%3Ccircle cx='163' cy='145' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  font-family: var(--font-body);
+  background: var(--bg-gradient);
+  /* The SVG tool icon pattern is kept but we add the noise after */
+  background-attachment: fixed;
   color: var(--text-secondary);
   line-height: 1.7;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 174, 239, 0.1);
+  position: relative;
+}
+
+/* Noise Texture Overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 9999;
 }
 
 button,
@@ -125,7 +148,10 @@ button {
 
 .section {
   padding: var(--section-padding);
+  padding: var(--section-padding);
   position: relative;
+  /* Subtle dividing line */
+  border-bottom: 1px solid var(--divider-color);
 }
 
 .section__header {
@@ -503,7 +529,11 @@ button {
   aspect-ratio: 3/4;
   background: var(--bg-card);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(156, 163, 175, 0.12);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -598,7 +628,11 @@ button {
   padding: 20px 12px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
 }
 
 .stat__number {
@@ -690,7 +724,11 @@ button {
   padding: 20px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
   transition: all var(--transition-base);
 }
 
@@ -814,7 +852,11 @@ button {
   padding: 32px 28px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
   transition: all var(--transition-base);
   overflow: hidden;
 }
@@ -923,7 +965,11 @@ button {
   padding: 48px 32px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-card);
   transition: all var(--transition-base);
 }
 
@@ -1088,7 +1134,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  border: 1px solid var(--border-card);
   overflow: hidden;
 }
 
@@ -1120,7 +1166,7 @@ button {
   padding: 40px 32px;
   background: var(--bg-card);
   border-radius: var(--radius-md);
-  border: 1px solid rgba(156, 163, 175, 0.08);
+  border: 1px solid var(--border-card);
 }
 
 .location-card__icon {
