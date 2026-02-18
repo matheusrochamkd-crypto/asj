@@ -33,7 +33,7 @@
   /* Spacing */
   --section-padding: 80px 0;
   --container-width: 1200px;
-  --header-height: 100px;
+  --header-height: 130px;
 
   /* Borders */
   --radius-sm: 6px;
@@ -269,6 +269,13 @@ button {
   height: 120px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .header__logo-img {
+    height: 160px;
+  }
 }
 
 .logo-text {
@@ -1297,17 +1304,16 @@ button {
 }
 
 .footer__partner-logo {
-  height: 48px;
+  height: 60px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%) brightness(0.8);
-  opacity: 0.6;
-  transition: all var(--transition-base);
+  filter: none;
+  opacity: 1;
+  transition: transform var(--transition-base);
 }
 
 .footer__partner-logo:hover {
-  filter: grayscale(0%) brightness(1);
-  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* ========================================
