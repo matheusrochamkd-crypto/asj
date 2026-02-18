@@ -266,7 +266,7 @@ button {
 }
 
 .header__logo-img {
-  height: 120px;
+  height: 150px;
   width: auto;
   object-fit: contain;
   transition: height 0.3s ease;
@@ -1314,6 +1314,29 @@ button {
 
 .footer__partner-logo:hover {
   transform: scale(1.05);
+}
+
+.footer__staleks-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: rgba(0, 174, 239, 0.1);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 50px;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.footer__staleks-link:hover {
+  background: var(--accent-cyan);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 174, 239, 0.3);
 }
 
 /* ========================================
