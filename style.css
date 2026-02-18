@@ -2196,10 +2196,7 @@ button {
   }
 
   /* Increase Lighter Blue in Mobile Background */
-  body {
-    background: radial-gradient(circle at center top, #2b3952, #1a2233, #000000);
-    /* Lighter/Bluer top */
-  }
+
 }
 
 /* ========================================
