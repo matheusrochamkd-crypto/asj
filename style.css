@@ -1738,6 +1738,7 @@ button {
   /* Header Logo Mobile - Large and Aligned Left */
   .header__logo-img {
     height: 90px;
+    width: auto;
     margin-left: 0;
   }
 
