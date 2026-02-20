@@ -193,6 +193,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ========== DYNAMIC SPOTLIGHT TRACKING ==========
+  let mouseX = 50;
+  let mouseY = 50;
+  let currentX = 50;
+  let currentY = 50;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = (e.clientX / window.innerWidth) * 100;
+    mouseY = (e.clientY / window.innerHeight) * 100;
+  });
+
+  function updateSpotlight() {
+    // Smooth interpolation (lerp) for premium feel
+    currentX += (mouseX - currentX) * 0.1;
+    currentY += (mouseY - currentY) * 0.1;
+
+    document.documentElement.style.setProperty('--mouse-x', `${currentX}%`);
+    document.documentElement.style.setProperty('--mouse-y', `${currentY}%`);
+
+    requestAnimationFrame(updateSpotlight);
+  }
+
+  updateSpotlight();
+
   // ========== HERO PARTICLES ==========
   const particlesContainer = document.getElementById('particles');
 
