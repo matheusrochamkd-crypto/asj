@@ -2400,3 +2400,41 @@ button {
     opacity: 0;
   }
 }
+
+/* ---------- Subtle Watermark on All Sections ---------- */
+.section::after {
+  content: "ASJ";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.015);
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+  line-height: 1;
+}
+
+/* ---------- Footer Reseller ---------- */
+.footer__reseller {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(156, 163, 175, 0.1);
+}
+
+.footer__reseller-text {
+  font-size: 0.9rem;
+  color: var(--silver-light);
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.footer__reseller-text strong {
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
