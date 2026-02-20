@@ -285,25 +285,25 @@ button {
    HEADER
    ======================================== */
 .header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  z-index: 1000;
-  background-color: rgba(6, 11, 18, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  transition: all var(--transition-base);
+  width: 100%;
+  z-index: 50;
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  transition: none;
   min-height: var(--header-height);
   padding: 10px 0;
 }
 
 .header--scrolled {
-  background-color: rgba(6, 11, 18, 0.92);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .header__inner {
@@ -363,7 +363,7 @@ button {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--silver-light);
+  color: #ffffff;
   text-decoration: none;
   position: relative;
   transition: color var(--transition-fast);
