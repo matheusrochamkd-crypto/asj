@@ -291,19 +291,20 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  border-bottom: 1px solid transparent;
+  background-color: rgba(6, 11, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   transition: all var(--transition-base);
   min-height: var(--header-height);
   padding: 10px 0;
 }
 
 .header--scrolled {
-  background: rgba(10, 10, 10, 0.98);
-  border-bottom: 1px solid rgba(156, 163, 175, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  background-color: rgba(6, 11, 18, 0.92);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 
 .header__inner {
