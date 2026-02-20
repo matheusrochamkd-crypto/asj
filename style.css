@@ -2458,3 +2458,17 @@ button {
 .header__cta {
   display: flex;
 }
+
+/* Hide WhatsApp button on mobile */
+@media (max-width: 768px) {
+  .header__cta {
+    display: none;
+  }
+}
+
+/* Desktop: texture more visible */
+@media (min-width: 769px) {
+  body::before {
+    opacity: 0.55;
+  }
+}
