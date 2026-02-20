@@ -1399,8 +1399,18 @@ button {
 
 /* Footer Partner Logos */
 .footer__partners {
-  padding: 24px 0;
-  border-top: 1px solid rgba(156, 163, 175, 0.08);
+  background-color: #f8fafc;
+  padding: 60px 0;
+  margin: 0;
+  width: 100%;
+}
+
+.footer__partners .footer__heading {
+  color: #0a0e17;
+}
+
+.footer__partners .footer__staleks-link {
+  color: #0a0e17;
 }
 
 .footer__partners-logos {
@@ -1416,9 +1426,13 @@ button {
   width: auto;
   margin: 0 30px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
-  transition: filter var(--transition-base), opacity var(--transition-base);
+  filter: none;
+  opacity: 1;
+  transition: transform var(--transition-base);
+}
+
+.footer__partner-logo:hover {
+  transform: scale(1.05);
 }
 
 .footer__staleks-link {
