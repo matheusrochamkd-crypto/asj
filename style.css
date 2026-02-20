@@ -2287,7 +2287,9 @@ button {
 
   /* Add local spotlights to sections that were appearing 'flat black' */
   .specialist,
-  .about {
+  .about,
+  .differentials,
+  .services {
     background-image: radial-gradient(circle at 50% 50%, rgba(20, 50, 80, 0.4) 0%, transparent 80%);
   }
 
@@ -2421,7 +2423,9 @@ button {
 
   /* Carry over spotlight depth to small mobile */
   .specialist,
-  .about {
+  .about,
+  .differentials,
+  .services {
     background-image: radial-gradient(circle at 50% 50%, rgba(20, 50, 80, 0.4) 0%, transparent 80%);
   }
 }
@@ -2479,24 +2483,24 @@ button {
   font-weight: 600;
 }
 
-/* ---------- Footer Warning Note ---------- */
+/* ---------- Footer Warning Note (Simplified & Discrete) ---------- */
 .footer__warning {
-  text-align: center;
-  margin-top: 20px;
-  padding: 14px 20px;
-  background: rgba(220, 38, 38, 0.1);
-  border: 1px solid rgba(220, 38, 38, 0.3);
-  border-radius: var(--radius-md);
+  margin-top: 12px;
+  padding: 0;
+  background: none;
+  border: none;
+  text-align: left;
 }
 
 .footer__warning-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ef4444;
-  letter-spacing: 0.3px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--silver-dark);
+  letter-spacing: 0.2px;
+  opacity: 0.8;
 }
 
-/* ---------- Header WhatsApp Button ---------- */
+/* Header WhatsApp Button ---------- */
 .header__cta {
   display: flex;
 }
