@@ -2438,3 +2438,26 @@ button {
   color: var(--accent-cyan);
   font-weight: 600;
 }
+
+/* ---------- Footer Warning Note ---------- */
+.footer__warning {
+  text-align: center;
+  margin-top: 20px;
+  padding: 14px 20px;
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.3);
+  border-radius: var(--radius-md);
+}
+
+.footer__warning-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ef4444;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Header WhatsApp Button Spacing ---------- */
+.header__cta {
+  display: flex;
+  margin-left: 24px;
+}
