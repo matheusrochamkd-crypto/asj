@@ -101,7 +101,7 @@ body::before {
   background-repeat: repeat;
   background-size: 400px;
   mix-blend-mode: overlay;
-  opacity: 0.05;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 0;
 }
@@ -2483,6 +2483,6 @@ button {
 /* Desktop: texture more visible */
 @media (min-width: 769px) {
   body::before {
-    opacity: 0.08;
+    opacity: 0.40;
   }
 }
