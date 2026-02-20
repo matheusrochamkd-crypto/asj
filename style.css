@@ -1399,18 +1399,23 @@ button {
 
 /* Footer Partner Logos */
 .footer__partners {
-  background-color: #f8fafc;
+  background: linear-gradient(180deg, #050a10 0%, #0a1622 100%);
   padding: 60px 0;
   margin: 0;
   width: 100%;
+  border-top: 1px solid rgba(0, 229, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 229, 255, 0.2);
+  text-align: center;
 }
 
 .footer__partners .footer__heading {
-  color: #0a0e17;
-}
-
-.footer__partners .footer__staleks-link {
-  color: #0a0e17;
+  color: #00E5FF;
+  text-align: center;
+  margin-bottom: 32px;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
 }
 
 .footer__partners-logos {
@@ -1422,40 +1427,43 @@ button {
 }
 
 .footer__partner-logo {
-  height: 60px;
+  height: 55px;
   width: auto;
   margin: 0 30px;
   object-fit: contain;
-  filter: none;
+  filter: brightness(1.2) contrast(1.1);
   opacity: 1;
-  transition: transform var(--transition-base);
+  transition: transform var(--transition-base), filter var(--transition-base);
 }
 
 .footer__partner-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
+  filter: brightness(1.4) contrast(1.2);
 }
 
-.footer__staleks-link {
+.footer__partners .footer__staleks-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 24px;
-  padding: 12px 24px;
-  background: rgba(0, 174, 239, 0.1);
-  border: 1px solid var(--accent-cyan);
-  border-radius: 50px;
-  color: var(--accent-cyan);
-  font-weight: 600;
-  font-size: 0.9rem;
-  text-decoration: none;
+  gap: 10px;
+  margin-top: 32px;
+  padding: 12px 28px;
+  border: 2px solid #00E5FF;
+  color: #00E5FF;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   transition: all var(--transition-base);
 }
 
-.footer__staleks-link:hover {
-  background: var(--accent-cyan);
-  color: #fff;
+.footer__partners .footer__staleks-link:hover {
+  background: #00E5FF;
+  color: #000000;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 174, 239, 0.3);
 }
 
 /* ========================================
