@@ -7,11 +7,11 @@
   /* Colors */
   --bg-primary: #121212;
   --bg-secondary: transparent;
-  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card: rgba(255, 255, 255, 0.035);
   /* Glassmorphism */
-  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
   /* Hover */
-  --border-card: rgba(255, 255, 255, 0.1);
+  --border-card: rgba(255, 255, 255, 0.08);
 
   /* New Radial Gradient */
   --bg-gradient: radial-gradient(circle at center top, #1a202c, #0d1117, #000000);
@@ -158,14 +158,26 @@ button {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(0, 204, 255, 0.35));
 }
 
 .section {
   padding: var(--section-padding);
-  padding: var(--section-padding);
   position: relative;
-  /* Subtle dividing line */
-  border-bottom: 1px solid var(--divider-color);
+  border-bottom: none;
+}
+
+/* Light blade separator between sections */
+.section::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(0, 204, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
 }
 
 .section__header {
@@ -188,9 +200,10 @@ button {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
-  color: var(--text-primary);
+  color: #f8fafc;
   line-height: 1.2;
   margin-bottom: 16px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .section__divider {
@@ -877,13 +890,12 @@ button {
 .timeline-card {
   position: relative;
   padding: 32px 28px;
-  background: var(--bg-card);
-  border-radius: var(--radius-md);
-  background: var(--bg-card);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-base);
   overflow: hidden;
 }
@@ -940,8 +952,9 @@ button {
   font-family: var(--font-heading);
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #f8fafc;
   margin-bottom: 12px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .timeline-card__text {
@@ -990,13 +1003,12 @@ button {
 .differential {
   text-align: center;
   padding: 48px 32px;
-  background: var(--bg-card);
-  border-radius: var(--radius-md);
-  background: var(--bg-card);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-card);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-base);
 }
 
@@ -1022,8 +1034,9 @@ button {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #f8fafc;
   margin-bottom: 12px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .differential__text {
