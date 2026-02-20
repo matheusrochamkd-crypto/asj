@@ -1322,7 +1322,8 @@ button {
    ======================================== */
 .footer {
   padding: 48px 0 0;
-  background: var(--bg-secondary);
+  background-color: #050a10;
+  /* Solid color to remove texture visibility */
   border-top: 1px solid rgba(156, 163, 175, 0.08);
 }
 
@@ -2277,11 +2278,22 @@ button {
     transform: translate(0, 0);
   }
 
-  /* Increase Lighter Blue in Mobile Background */
+  /* Increase Lighter Blue in Mobile Background and fix stretching */
   body {
     background-attachment: scroll;
+    background-size: 100% 200vh;
+    /* Prevents extreme stretching on long mobile pages */
   }
 
+  /* Add local spotlights to sections that were appearing 'flat black' */
+  .specialist,
+  .about {
+    background-image: radial-gradient(circle at 50% 50%, rgba(20, 50, 80, 0.4) 0%, transparent 80%);
+  }
+
+  .about__highlight-item {
+    background: rgba(255, 255, 255, 0.02);
+  }
 }
 
 /* ========================================
@@ -2405,6 +2417,12 @@ button {
   .whatsapp-fab {
     width: 52px;
     height: 52px;
+  }
+
+  /* Carry over spotlight depth to small mobile */
+  .specialist,
+  .about {
+    background-image: radial-gradient(circle at 50% 50%, rgba(20, 50, 80, 0.4) 0%, transparent 80%);
   }
 }
 
