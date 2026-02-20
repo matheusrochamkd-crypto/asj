@@ -100,9 +100,19 @@ body::before {
   background-repeat: repeat;
   background-size: 400px;
   background-blend-mode: soft-light;
-  opacity: 0.55;
+  opacity: 0.12;
   pointer-events: none;
-  z-index: 1;
+  z-index: 0;
+}
+
+/* Ensure all content sits above the texture */
+header,
+section,
+footer,
+.whatsapp-fab,
+.lightbox {
+  position: relative;
+  z-index: 2;
 }
 
 button,
