@@ -2524,6 +2524,16 @@ button {
   display: flex;
 }
 
+.hero__warning {
+  color: #ff3b3b;
+  font-weight: 700;
+  margin-top: 24px;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 /* Hide WhatsApp button on mobile */
 @media (max-width: 768px) {
   .header__cta {
