@@ -2532,6 +2532,12 @@ button {
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.text-red {
+  color: #ff3b3b !important;
+  opacity: 1 !important;
 }
 
 /* Hide WhatsApp button on mobile */
